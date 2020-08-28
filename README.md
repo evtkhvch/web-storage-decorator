@@ -25,6 +25,18 @@ export const WebStorage = <T>(
 ## How to use 🤭
 
 ```html
-@WebStorage(StorageType.sessionStorage) public token: string;
+class ExampleClass {
+    @WebStorage(StorageType.sessionStorage) public token: string;
+
+    public exampleMethod(token: string): void {
+        // **
+        this.token = string; // set
+    }
+
+    public exmapleMethod2(): string {
+        // **
+        return this.token // get
+    }
+}
 ```
 
