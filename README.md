@@ -1,15 +1,6 @@
 ## 😉 Web Storage Decortor 😉
 
 ```html
-export enum StorageType {
-  localStorage = 'localStorage',
-  sessionStorage = 'sessionStorage'
-}
-
-const errorLogger = (e: unknown): void => {
-  console.error(e);
-};
-
 export const WebStorage = <T>(
     nameStorage: StorageType = StorageType.localStorage,
     platform: Window = window
