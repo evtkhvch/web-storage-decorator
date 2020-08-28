@@ -1,6 +1,6 @@
-## Web Storage Decortor
+## 😉 Web Storage Decortor 😉
 
-## How to use
+## How to use 🤭
 
 ```html
 @WebStorage(StorageType.sessionStorage) public token: string;
