@@ -1,4 +1,4 @@
-## 😉 Web Storage Decortor 😉
+## 😉 Web Storage Decorator 😉
 
 ```html
 export const WebStorage = <T>(
@@ -26,6 +26,7 @@ export const WebStorage = <T>(
 
 ```html
 class ExampleClass {
+    // decorator
     @WebStorage(StorageType.sessionStorage) public token: string;
 
     public exampleMethod(token: string): void {
