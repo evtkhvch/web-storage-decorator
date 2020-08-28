@@ -3,17 +3,20 @@ export enum StorageType {
   sessionStorage = 'sessionStorage'
 }
 
-const errorLogger = (e: unknown): void => { console.error(e) };
+const errorLogger = (e: unknown): void => {
+  console.error(e);
+};
 
-const WINDOW_REF = window;
-
-export const WebStorage = <T>(nameStorage: StorageType = StorageType.localStorage): (target: T, propertyKey: string) => void => {
+export const WebStorage = <T>(
+    nameStorage: StorageType = StorageType.localStorage,
+    platform: Window = window
+): ((target: T, propertyKey: string) => void) => {
   return (target: T, propertyKey: string): void => {
     Object.defineProperty(target, propertyKey, {
-      get: (): T | null => JSON.parse(WINDOW_REF[nameStorage].getItem(propertyKey)) || null,
+      get: (): T | null => JSON.parse(platform[nameStorage].getItem(propertyKey)) || null,
       set: (value: T) => {
         try {
-          WINDOW_REF[nameStorage].setItem(propertyKey, JSON.stringify(value));
+          platform[nameStorage].setItem(propertyKey, JSON.stringify(value));
         } catch (e) {
           errorLogger(e);
         }
