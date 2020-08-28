@@ -1,9 +1,5 @@
 ## 😉 Web Storage Decortor 😉
 
-## How to use 🤭
-
-src:
-
 ```html
 export enum StorageType {
   localStorage = 'localStorage',
@@ -35,7 +31,7 @@ export const WebStorage = <T>(
 };
 ```
 
-use:
+## How to use 🤭
 
 ```html
 @WebStorage(StorageType.sessionStorage) public token: string;
