@@ -1,4 +1,4 @@
-## 😉 Web Storage Decorator 😉
+## Web Storage Decorator ⚡️
 
 ```html
 export const WebStorage = <T>(
@@ -22,7 +22,7 @@ export const WebStorage = <T>(
 };
 ```
 
-## How to use 🤭
+## How to use 🤔
 
 ```html
 class ExampleClass {
